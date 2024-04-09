@@ -1,0 +1,18 @@
+landing:
+    - typing "Hi! This is my portfolio. Please use prompts to know more about me"
+
+prompts:
+    - what's the total years of experience do you have in this industry?
+    - can you introduce yourself?
+    - what all domain have you worked in the past?
+    - what are your hobbies?
+    - what's tech stack you have expertise in?
+    - How do I contact you?
+    - Could you share your resume?
+
+response: 
+    - ... animation
+    - chat like UI
+    - on too many questions, "You have exhausted me 😮‍💨, wait a minute before prompting",
+    "I'm not a machine🤖⚠️, please go slow!"
+
