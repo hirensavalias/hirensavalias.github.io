@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir docs  --assetsDir .",
+    "build": "vite build --outDir docs  --assetsDir portfolio-gpt",
     "preview": "vite preview"
   },
   "devDependencies": {
