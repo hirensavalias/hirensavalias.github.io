@@ -3,6 +3,7 @@ import { INTRO_MESSAGE, PROMPTS } from './messages.constants';
 import './style.css'
 import { typeWriter } from './typeWriter';
 import { sleep } from './utils';
+import { handleExpandPromptButtonClick } from './handlers';
 
 function showIntro() {
   const introContainer = document.getElementById("intro");
@@ -25,7 +26,7 @@ async function handlePromptClick(id) {
 }
 
 function initPrompts() {
-  const prompt = document.getElementById("prompts-container");
+  const prompt = document.getElementsByClassName("prompts")[0];
   const promptList = PROMPTS.sort(() => (Math.random() * 2) - 1).map(prompt => {
     return createPromptItem(prompt, handlePromptClick);
   })
@@ -34,5 +35,10 @@ function initPrompts() {
 
 showIntro();
 initPrompts();
+
+(function () {
+  const expandButton = document.getElementsByClassName('expand-button')[0];
+  expandButton.addEventListener('click', handleExpandPromptButtonClick)
+})()
 
 
