@@ -3,8 +3,14 @@ import { typeWriter } from "./typeWriter";
 export function createPromptItem(prompt, listener) {
     const promptDiv = document.createElement('div');
     promptDiv.classList.add('prompt-item');
-    promptDiv.textContent = prompt.question;
     promptDiv.onclick = () => listener(prompt.id);
+
+    promptDiv.innerHTML = `<i class="fa-solid fa-circle-plus fa-xl"></i>`;
+
+    const promptQuestion = document.createElement('div');
+    promptQuestion.textContent = prompt.question;
+    promptDiv.appendChild(promptQuestion)
+
     return promptDiv;
 }
 
